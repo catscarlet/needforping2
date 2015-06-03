@@ -3,7 +3,7 @@ function MyX(whichjson) {
 
 var MyXA = new Array();
 $.ajaxSettings.async = false;
-$.getJSON("./needforping/pingresult/" + whichjson,function(data){
+$.getJSON("./shell/pingresult/" + whichjson,function(data){
 		$.each(data,function(infoIndex,info){
 			MyXA[ infoIndex ] = info["TIME"] ;
 
@@ -18,7 +18,7 @@ function MyY(whichjson) {
 var MyA = new Array();
 var str = new Number;
 $.ajaxSettings.async = false;
-$.getJSON("./needforping/pingresult/" + whichjson,function(data){
+$.getJSON("./shell/pingresult/" + whichjson,function(data){
 		$.each(data,function(infoIndex,info){
 			str = info["LOSS"].replace(/%/,"");
 

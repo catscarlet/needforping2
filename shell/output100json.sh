@@ -1,7 +1,7 @@
 #!/bin/sh
 needforping_DIR=/home/pi/nginx_sites/www/needforping
-TMP_DIR=/$needforping_DIR/pingresult
-SERVER_LIST=server_list.txt
+TMP_DIR=$needforping_DIR/shell/pingresult
+SERVER_LIST=$needforping_DIR/shell/server_list.txt
 
 
 while read line
@@ -30,4 +30,4 @@ tail -n $OUTPUTNUM $OUTPUTTMP > $OUTPUTTMP360
   done < $OUTPUTTMP360
   echo "]" >> $OUTPUTFORJS
 
-done < $needforping_DIR/$SERVER_LIST
+done < $SERVER_LIST
