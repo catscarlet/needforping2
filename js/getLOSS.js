@@ -56,7 +56,7 @@ $(function() {
 		},
 		yAxis: {
 			title: {
-				text: '丢包率 (%)'
+				text: '连通率 (%)'
 			},
 
 			value: 0,
