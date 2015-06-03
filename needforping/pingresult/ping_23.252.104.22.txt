@@ -1,0 +1,5 @@
+
+Wed Jun  3 16:38:02 CST 2015
+--- 23.252.104.22 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99128ms
+rtt min/avg/max/mdev = 233.614/266.802/281.592/10.363 ms

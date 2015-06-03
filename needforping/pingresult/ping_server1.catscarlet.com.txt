@@ -1,0 +1,5 @@
+
+Wed Jun  3 16:38:01 CST 2015
+--- server1.catscarlet.com ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 99131ms
+rtt min/avg/max/mdev = 153.967/154.321/154.949/0.395 ms

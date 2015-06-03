@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+
+
+<script type="text/javascript">
+
+function MyX(whichjson) {
+//	alert("./needforping/pingresult/"whichjson);
+var MyXA = new Array();
+$.ajaxSettings.async = false;
+$.getJSON("./needforping/pingresult/" + whichjson,function(data){
+		$.each(data,function(infoIndex,info){
+			MyXA[ infoIndex ] = info["TIME"] ;
+//					alert(infoIndex + " " + json2[ infoIndex ]);
+//alert("Each MyXA" + " " + MyXA);
+		})
+		//alert("json2 in getJSON" + " " + json2);
+})
+//alert("Return MyXA" + " " + MyXA);
+return MyXA;
+}
+
+function MyY(whichjson) {
+var MyA = new Array();
+var str = new Number;
+$.ajaxSettings.async = false;
+$.getJSON("./needforping/pingresult/" + whichjson,function(data){
+		$.each(data,function(infoIndex,info){
+			str = info["LOSS"].replace(/%/,"");
+			//alert("str" + " " + str);
+			MyA[ infoIndex ] = 100 - Number(str) ;
+//					alert(infoIndex + " " + json2[ infoIndex ]);
+//alert("Each MyXA" + " " + MyXA);
+		})
+		//alert("json2 in getJSON" + " " + json2);
+})
+//alert("Return MyXA" + " " + MyXA);
+return MyA;
+}
+
+
+$(function () {
+	var json2 = new Array();
+
+
+    $('#container').highcharts({
+
+			chart: {
+	type: 'column'
+},
+
+				title: {
+            text: '每日网络连通率',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: pi.catscarlet.com',
+            x: -20
+        },
+        xAxis: {
+					categories: MyX("server1.catscarlet.com.json")
+//            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: '丢包率 (%)'
+            },
+
+                value: 0,
+                width: 1,
+                color: '#808080'
+
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+					enabled: true,
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Server1',
+            //data: MyyAxis
+						//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+						//data: MyyAxis
+						data: MyY("server1.catscarlet.com.json")
+        }
+				]
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="../../js/highcharts.js"></script>
+<script src="../../js/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>
