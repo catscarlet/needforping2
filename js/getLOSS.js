@@ -43,7 +43,7 @@ $(function () {
 			},
 
 				title: {
-            text: '北京联通至各服务器网络连通率',
+            text: '服务器网络连通率',
             x: -20 //center
         },
         subtitle: {
