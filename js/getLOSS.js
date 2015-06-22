@@ -110,11 +110,6 @@ $(function() {
 				//data: MyyAxis
 				data: MyYLOSS("192.157.214.6.json")
 			}, {
-				name: 'BudgetVM - Miami',
-				//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-				//data: MyyAxis
-				data: MyYLOSS("172.246.125.7.json")
-			}, {
 				name: 'Bandwagon Host - Phoenix',
 				//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
 				//data: MyyAxis
@@ -129,11 +124,6 @@ $(function() {
 				//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
 				//data: MyyAxis
 				data: MyYLOSS("23.252.104.22.json")
-			}, {
-				name: 'Bandwagon Host - Holland',
-				//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-				//data: MyyAxis
-				data: MyYLOSS("192.243.124.74.json")
 			}
 
 		]

@@ -1,16 +1,14 @@
 #!/bin/sh
-#server1.catscarlet.com
-#date >> /home/pi/nginx_sites/www/needforping/pingresult/ping_server1.txt
-#ping -c 10 www.baidu.com |tail -n 3 >> /home/pi/nginx_sites/www/needforping/pingresult/ping_server1.txt &
 
-#sleep 12
 
-#./readline2.sh /home/pi/nginx_sites/www/needforping/pingresult/ping_server1.txt
 
-needforping_DIR=/home/pi/nginx_sites/www/needforping
+
+needforping_DIR=/var/www/needforping
+
+
+
 TMP_DIR=/$needforping_DIR/shell/pingresult
 SERVER_LIST=/$needforping_DIR/shell/server_list.txt
-
 
 line=$1
 
