@@ -10,17 +10,16 @@
 
 需要手动在crontab中添加类似：
 
-    */2 *   * * *   root~/www/needforping/shell/needforping3.sh
-    */2 *   * * *   root~/www/needforping/shell/output100json.sh
+    */2 *   * * *   root	/var/www/needforping/shell/needforping3.sh 
+    */2 *   * * *   root	/var/www/needforping/shell/output100json.sh
 
 needforping3.sh每2分钟向目的机ping 100个包，并收集延迟和丢包率。
 
 output100json.sh每2分钟将收集到的数据转换为json文件。
 
 
-
 展示地址：http://pi.catscarlet.com:8091/needforping/
 
-这个地址是一个插在北京联通宽带上的树莓派，性能不是很好，经常500错误，刷新几下就好了。
+这个地址是一个插在北京联通宽带上的树莓派，性能不是很好，经常打不开，刷新几下就好了。
 
 
