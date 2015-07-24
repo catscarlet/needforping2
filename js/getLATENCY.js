@@ -115,12 +115,12 @@ $(function () {
                 name: 'Bandwagon Host - LosAngeles',
                 data: MyYLATENCY('104.194.76.20.json')
             },
-            /*
-                        		{
-                        			name: 'Bandwagon Host - Florida',
-                        			data: MyYLATENCY('23.252.104.22.json')
-                        		},
 
+            {
+                name: 'Bandwagon Host - Florida',
+                data: MyYLATENCY('23.252.104.22.json')
+            },
+            /*
                         		{
                         			name: 'Bandwagon Host - Holland',
                         			data: MyYLATENCY('192.243.124.74.json')

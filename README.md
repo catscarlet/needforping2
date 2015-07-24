@@ -9,16 +9,16 @@
 底层依靠shell脚本做数据的采集，界面使用一个简单的html，和highcharts JS图表库进行展示。
 
 ## 安装
-部分脚本需要修改其安装目录：
-
+1. 部分shell脚本需要修改其安装目录：
 ```
 needforping_DIR=/var/www/needforping
 ```
 
-并需要手动在crontab中添加类似：
+2. 给$needforping_DIR/shell/目录下的shell脚本增加运行权限
 
+3. 手动在crontab中添加类似：
 ```
-*/2 *   * * *   root    /var/www/needforping/shell/needforping3.sh
+*/2 *   * * *   root    /var/www/needforping/shell/needforping.sh
 */2 *   * * *   root    /var/www/needforping/shell/output100json.sh
 ```
 
@@ -39,7 +39,9 @@ getLOSS.js和getLATENCY.js是我自己写的，用于获取和展示图表。JS�
 这个地址是一个插在北京联通宽带上的树莓派，偶尔会关机，所以打不开很正常233。
 
 ## 已知缺陷
-目前所有记录都是存在于$needforping_DIR/shell/pingresult目录下的，很多很臃肿，而且没有回滚功能，终究将会越跑越慢，甚至撑死硬盘。想要改良的话就需要linux的logrotate或crontab做支持，懒。有需要的朋友就自己修复吧。
+1. 目前所有记录都是存在于$needforping_DIR/shell/pingresult目录下的，很多很臃肿，而且没有回滚功能，终究将会越跑越慢，甚至撑死硬盘。想要改良的话就需要linux的logrotate或crontab做支持，懒。有需要的朋友就自己修复吧。
+
+2. 脚本output100json.sh在首次运行的时候会有找不到文件的问题，没有做文件存在检查。
 
 ## TODO
 未来版本将会制作成html+php+mysql+js+bash多语言的，将采集的数据保存在mysql中，并使用php进行调用和回滚。 本项目主要是用于学习目的，实际使用请自行修改。

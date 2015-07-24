@@ -113,12 +113,12 @@ $(function () {
                 name: 'Bandwagon Host - LosAngeles',
                 data: MyYLOSS('104.194.76.20.json')
             },
-            /*
-            		{
-            			name: 'Bandwagon Host - Florida',
-            			data: MyYLOSS('23.252.104.22.json')
-            		},
 
+            {
+                name: 'Bandwagon Host - Florida',
+                data: MyYLOSS('23.252.104.22.json')
+            },
+            /*
             		{
             			name: 'Bandwagon Host - Holland',
             			data: MyYLOSS('192.243.124.74.json')
