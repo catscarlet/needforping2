@@ -9,14 +9,13 @@
 底层依靠shell脚本做数据的采集，界面使用一个简单的html，和highcharts JS图表库进行展示。
 
 ## 安装
-1. 部分shell脚本需要修改其安装目录：
+- 部分shell脚本需要修改其安装目录：
 ```
 needforping_DIR=/var/www/needforping
 ```
+- 给$needforping_DIR/shell/目录下的shell脚本增加运行权限
 
-2. 给$needforping_DIR/shell/目录下的shell脚本增加运行权限
-
-3. 手动在crontab中添加类似：
+- 手动在crontab中添加类似：
 ```
 */2 *   * * *   root    /var/www/needforping/shell/needforping.sh
 */2 *   * * *   root    /var/www/needforping/shell/output100json.sh
