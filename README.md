@@ -23,7 +23,10 @@ needforping_DIR=/var/www/needforping
 
 建议先自己看一下脚本内的实现，并不是很复杂
 
-## 介绍
+## 配置
+修改output100json.sh中的OUTPUTNUM=720以调整每次更新json中的条目数量。目前是2分钟执行一次，设置为30便是一小时，设置720便是一天。ooutput100json是每2分钟执行一次，非实时生效。get___.js脚本未限制输出数量。
+
+## 代码组成
 ### Bash部分
 needforping3.sh每2分钟向目的机ping 100个包，并收集延迟和丢包率。
 
