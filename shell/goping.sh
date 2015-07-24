@@ -13,5 +13,5 @@ OUTPUTFORJS=$TMP_DIR/$line.json
   ping -c 100 $line |tail -n 3 >> $OUTPUTTXT
 
 echo readline start && date
-  $needforping_DIR/shell/readline3.sh $OUTPUTTXT $OUTPUTTMP
+  $needforping_DIR/shell/readline.sh $OUTPUTTXT $OUTPUTTMP
 echo readline finish && date
