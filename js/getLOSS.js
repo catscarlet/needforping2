@@ -5,11 +5,8 @@ function MyX(whichjson) {
     $.getJSON('./shell/pingresult/' + whichjson, function (data) {
         $.each(data, function (infoIndex, info) {
             MyXA[infoIndex] = info.TIME;
-
         });
-
     });
-
     return MyXA;
 }
 
@@ -20,13 +17,9 @@ function MyYLOSS(whichjson) {
     $.getJSON('./shell/pingresult/' + whichjson, function (data) {
         $.each(data, function (infoIndex, info) {
             str = info.LOSS.replace(/%/, '');
-
             MyA[infoIndex] = 100 - Number(str);
-
         });
-
     });
-
     return MyA;
 }
 

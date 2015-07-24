@@ -5,7 +5,6 @@ function MyX(whichjson) {
     $.getJSON('./shell/pingresult/' + whichjson, function (data) {
         $.each(data, function (infoIndex, info) {
             MyXA[infoIndex] = info.TIME;
-
         });
     });
     return MyXA;
@@ -18,16 +17,11 @@ function MyYLATENCY(whichjson) {
     $.getJSON('./shell/pingresult/' + whichjson, function (data) {
         $.each(data, function (infoIndex, info) {
             str = Math.round(info.avg);
-
             MyA[infoIndex] = str;
-
-            // alert(MyA[infoIndex]);
         });
 
     });
-
     return MyA;
-
 }
 
 $(function () {
