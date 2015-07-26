@@ -8,21 +8,13 @@ function getecho() {
     }
 
     var url = "query.php"
-    url = url + "?q=" + "server2.catscarlet.com" + "&sid=" + Math.random()
+    var query_server = "server2.catscarlet.com"
+    url = url + "?q=" + query_server + "&sid=" + Math.random()
     xmlHttp.onreadystatechange = stateChanged
     xmlHttp.open("GET", url, true)
     xmlHttp.send(null)
 }
 
-function stateChanged() {
-    if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
-
-        var mycars=new Array() ;
-        mycars = xmlHttp.responseText.concat();
-
-        document.getElementById("ajax_test").innerHTML = xmlHttp.responseText;
-    }
-}
 
 function GetXmlHttpObject() {
     var xmlHttp = null;
@@ -38,4 +30,15 @@ function GetXmlHttpObject() {
         }
     }
     return xmlHttp;
+}
+
+
+function stateChanged() {
+    if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
+        //var mycars = new Array();
+        //mycars = xmlHttp.responseText.concat();
+        var obj = eval ("(" + xmlHttp.responseText + ")");
+
+        document.getElementById("ajax_test").innerHTML = obj[0].DATETIME;
+    }
 }
