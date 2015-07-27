@@ -41,7 +41,7 @@ while($row = mysql_fetch_array($result) and $i >= 0)
      $query_DATA['DATETIME'][$i]=$row['DATETIME'];
      $query_DATA['loss_percent'][$i]=100-substr($row['loss_percent'],0,-1);
      //$query_DATA['loss_percent'][$i]=$nums=$nums;
-     $query_DATA['rtt_avg'][$i]=$row['rtt_avg'];
+     $query_DATA['rtt_avg'][$i]=round($row['rtt_avg']);
 
 //echo $row['server_name']." is ".$row['rtt_avg']."<br>";
 //print_r (mysql_fetch_array($result));
