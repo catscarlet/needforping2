@@ -9,7 +9,7 @@
 目前项目正在开发中，基础功能已经完成，但仍有很多细节和功能需要添加和完善......
 
 ### 软件截图
-![needforping2 logo](https://github.com/catscarlet/needforping2/blob/master/snapshot.png)
+![needforping2 logo](https://github.com/catscarlet/needforping2/blob/needforping2/snapshot.png)
 
 ## 安装
 ###全新安装
