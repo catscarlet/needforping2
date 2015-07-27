@@ -39,7 +39,7 @@ function stateChanged() {
         //var mycars = new Array();
         //mycars = xmlHttp.responseText.concat();
         window.obj = eval ("(" + xmlHttp.responseText + ")");
-        window.ajax_change_txt = "VAR!!!";
+        //window.ajax_change_txt = "VAR!!!";
         //document.getElementById("ajax_test").innerHTML = obj.server_name +  window.obj[1].loss_percent;
 /*
         window.testarray = new Array();
@@ -50,7 +50,7 @@ function stateChanged() {
         //document.getElementById("ajax_test").innerHTML = testarray[2];
         //ajax_test_change();
         draw_LOSS();
-
+        draw_LATENCY();
 
     }
 }

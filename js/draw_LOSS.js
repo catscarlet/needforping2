@@ -1,27 +1,4 @@
-function MyX(whichjson) {
 
-    var MyXA = new Array();
-    $.ajaxSettings.async = false;
-    $.getJSON('./shell/pingresult/' + whichjson, function (data) {
-        $.each(data, function (infoIndex, info) {
-            MyXA[infoIndex] = info.TIME;
-        });
-    });
-    return MyXA;
-}
-
-function MyYLOSS(whichjson) {
-    var MyA = new Array();
-    var str = new Number;
-    $.ajaxSettings.async = false;
-    $.getJSON('./shell/pingresult/' + whichjson, function (data) {
-        $.each(data, function (infoIndex, info) {
-            str = info.LOSS.replace(/%/, '');
-            MyA[infoIndex] = 100 - Number(str);
-        });
-    });
-    return MyA;
-}
 
 function draw_LOSS() {
 //document.getElementById("ajax_test").innerHTML = testarray;
