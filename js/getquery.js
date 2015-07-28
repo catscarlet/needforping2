@@ -1,13 +1,11 @@
 var xmlHttp
 
 function getquery(value) {
-
     xmlHttp = GetXmlHttpObject()
     if (xmlHttp == null) {
         alert("Browser does not support HTTP Request")
         return
     }
-
     var url = "query.php"
     var query_server = value
     url = url + "?q=" + query_server + "&sid=" + Math.random()
@@ -39,6 +37,5 @@ function stateChanged() {
         window.obj = eval("(" + xmlHttp.responseText + ")");
         draw_LOSS();
         draw_LATENCY();
-
     }
 }
