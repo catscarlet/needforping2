@@ -16,7 +16,7 @@ if (!$con)
  }
 
  /** 查询范围 */
-$query_range=180;
+$query_range=720;
 
 mysql_select_db(constant('DB_NAME'), $con);
 $sql="select * from ".$DB_TABLE." where server_name = '".$q."' order by id DESC LIMIT $query_range";
