@@ -1,7 +1,7 @@
 var xmlHttp
-    //$.ajaxSettings.async = false;
 
-function getquery() {
+function getquery(value) {
+
     xmlHttp = GetXmlHttpObject()
     if (xmlHttp == null) {
         alert("Browser does not support HTTP Request")
@@ -9,7 +9,7 @@ function getquery() {
     }
 
     var url = "query.php"
-    var query_server = "server2.catscarlet.com"
+    var query_server = value
     url = url + "?q=" + query_server + "&sid=" + Math.random()
     xmlHttp.onreadystatechange = stateChanged
     xmlHttp.open("GET", url, true)

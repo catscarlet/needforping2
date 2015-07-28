@@ -16,8 +16,18 @@
 	<script src="js/highcharts/modules/exporting.js"></script>
 
 	<p>
-		<button onclick="getquery()">Click here.</button>
-		<div id="ajax_test">This is html.</div>
+		<form>
+			<input type="radio" name="selecter" onclick="getquery('server2.catscarlet.com')">server2.catscarlet.com
+			<br>
+			<input type="radio" name="selecter" onclick="getquery('192.157.214.6')">BudgetVM - LosAngeles
+			<br>
+			<input type="radio" name="selecter" onclick="getquery('104.194.76.20')">Bandwagon Host - LosAngeles
+			<br>
+			<input type="radio" name="selecter" onclick="getquery('23.252.104.22')">Bandwagon Host - Florida
+			<br>
+			<input type="radio" name="selecter" onclick="getquery('198.35.46.1')">Bandwagon Host - Arizona
+			<br>
+		</form>
 	</p>
 
 	<script type="text/javascript" src="js/draw_LOSS.js"></script>
