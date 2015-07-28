@@ -1,31 +1,4 @@
-function MyX(whichjson) {
-
-    var MyXA = new Array();
-    $.ajaxSettings.async = false;
-    $.getJSON('./shell/pingresult/' + whichjson, function (data) {
-        $.each(data, function (infoIndex, info) {
-            MyXA[infoIndex] = info.TIME;
-        });
-    });
-    return MyXA;
-}
-
-function MyYLATENCY(whichjson) {
-    var MyA = new Array();
-    var str = new Number;
-    $.ajaxSettings.async = false;
-    $.getJSON('./shell/pingresult/' + whichjson, function (data) {
-        $.each(data, function (infoIndex, info) {
-            str = Math.round(info.avg);
-            MyA[infoIndex] = str;
-        });
-
-    });
-    return MyA;
-}
-
 function draw_LATENCY() {
-
 
     $('#LATENCY_container').highcharts({
 
@@ -85,7 +58,7 @@ function draw_LATENCY() {
                 //name: 'Tokyo',
                 name: obj.server_name,
                 data: obj.rtt_avg
-                //data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                    //data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
                     //data: window.obj[1].loss_percent
             }
             /*
@@ -94,47 +67,8 @@ function draw_LATENCY() {
                         {
                             name: 'BudgetVM - Chicago',
                             data: MyYLOSS('199.231.208.6.json')
-                        },
-
-                                    		{
-                                    			name: 'BudgetVM - Dallas',
-                                    			data: MyYLATENCY('192.80.186.135.json')
-                                    		},
-                        {
-                            name: 'BudgetVM - LosAngeles',
-                            data: MyYLATENCY('192.157.214.6.json')
-                        },
-                        /*
-                                    		{
-                                    			name: 'BudgetVM - Miami',
-                                    			data: MyYLATENCY('172.246.125.7.json')
-                                    		},
-
-                                    		{
-                                    			name: 'Bandwagon Host - Phoenix',
-                                    			data: MyYLATENCY('198.35.46.10.json')
-                                    		},
-
-                        {
-                            name: 'Bandwagon Host - LosAngeles',
-                            data: MyYLATENCY('104.194.76.20.json')
-                        },
-
-                        {
-                            name: 'Bandwagon Host - Florida',
-                            data: MyYLATENCY('23.252.104.22.json')
-                        },
-                        /*
-                                    		{
-                                    			name: 'Bandwagon Host - Holland',
-                                    			data: MyYLATENCY('192.243.124.74.json')
-                                    		},
-
-                        {
-                            name: 'Bandwagon Host - Arizona',
-                            data: MyYLATENCY('198.35.46.1.json')
                         }
-                                                */
+                        */
         ]
     });
 };

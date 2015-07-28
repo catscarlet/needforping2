@@ -1,5 +1,5 @@
 var xmlHttp
-//$.ajaxSettings.async = false;
+    //$.ajaxSettings.async = false;
 
 function getquery() {
     xmlHttp = GetXmlHttpObject()
@@ -36,19 +36,7 @@ function GetXmlHttpObject() {
 
 function stateChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
-        //var mycars = new Array();
-        //mycars = xmlHttp.responseText.concat();
-        window.obj = eval ("(" + xmlHttp.responseText + ")");
-        //window.ajax_change_txt = "VAR!!!";
-        //document.getElementById("ajax_test").innerHTML = obj.server_name +  window.obj[1].loss_percent;
-/*
-        window.testarray = new Array();
-        testarray[0] = obj.loss_percent[0];
-        testarray[1] = obj.loss_percent[1];
-        testarray[2] = obj.loss_percent[2];
-*/
-        //document.getElementById("ajax_test").innerHTML = testarray[2];
-        //ajax_test_change();
+        window.obj = eval("(" + xmlHttp.responseText + ")");
         draw_LOSS();
         draw_LATENCY();
 

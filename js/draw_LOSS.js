@@ -1,7 +1,5 @@
-
-
 function draw_LOSS() {
-//document.getElementById("ajax_test").innerHTML = testarray;
+
     $('#LOSS_container').highcharts({
 
         chart: {
@@ -19,7 +17,7 @@ function draw_LOSS() {
         },
         xAxis: {
             categories: obj.DATETIME
-            //categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                //categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         },
         yAxis: {
             title: {
@@ -58,59 +56,19 @@ function draw_LOSS() {
         },
         series: [{
                 //name: 'Tokyo',
-                name: obj.server_name ,
+                name: obj.server_name,
                 data: obj.loss_percent
-                //data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-                //data: window.obj[1].loss_percent
+                    //data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                    //data: window.obj[1].loss_percent
             }
-/*
-            ,
+            /*
+                        ,
 
-            {
-                name: 'BudgetVM - Chicago',
-                data: MyYLOSS('199.231.208.6.json')
-            },
-
-            {
-                name: 'BudgetVM - Dallas',
-                data: MyYLOSS('192.80.186.135.json')
-            },
-
-            {
-                name: 'BudgetVM - LosAngeles',
-                data: MyYLOSS('192.157.214.6.json')
-            },
-
-            {
-                name: 'BudgetVM - Miami',
-                data: MyYLOSS('172.246.125.7.json')
-            },
-
-            {
-                name: 'Bandwagon Host - Phoenix',
-                data: MyYLOSS('198.35.46.10.json')
-            },
-
-            {
-                name: 'Bandwagon Host - LosAngeles',
-                data: MyYLOSS('104.194.76.20.json')
-            },
-
-            {
-                name: 'Bandwagon Host - Florida',
-                data: MyYLOSS('23.252.104.22.json')
-            },
-
-            {
-                name: 'Bandwagon Host - Holland',
-                data: MyYLOSS('192.243.124.74.json')
-            },
-
-            {
-                name: 'Bandwagon Host - Arizona',
-                data: MyYLOSS('198.35.46.1.json')
-            }
-            */
+                        {
+                            name: 'Bandwagon Host - Arizona',
+                            data: MyYLOSS('198.35.46.1.json')
+                        }
+                        */
         ]
     });
 };
