@@ -1,12 +1,12 @@
-# needforping2
+# Need For Ping 2
 ## 简介
-项目Need For Ping 2 [https://github.com/catscarlet/needforping](https://github.com/catscarlet/needforping) 的升级版，由之前将数据保存到文件更改为保存到mysql数据库，增加陈旧数据的删除，减少json的请求，修复旧版本的一些问题。
+项目Need For Ping[https://github.com/catscarlet/needforping](https://github.com/catscarlet/needforping) 的升级版，由之前将数据保存到文件更改为保存到mysql数据库，增加陈旧数据的删除，减少json的请求，修复旧版本的一些问题。
 
 项目工作方式是定时ping远端主机，收集丢包率和延迟，并用图表展示。
 
 项目是靠html+php+mysql+js+bash(unix shell)编写和运行的。
 
-底层依靠shell脚本做数据的采集，界面使用一个简单的html做框架，js做ajax取数据做查询，php负责从mysql读取数据并输出json格式，最终由highcharts JS图表库进行展示
+底层依靠shell脚本做数据的采集；界面使用一个简单的html做框架，js做ajax取数据做查询，php负责从mysql读取数据并输出json格式，最终由highcharts JS图表库进行展示
 
 **注意，needforping2版本仅支持同一页面显示一组数据，不能像旧版needforping一样同时显示多组数据**
 
