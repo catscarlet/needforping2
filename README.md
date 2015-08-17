@@ -1,4 +1,8 @@
 # Need For Ping 2
+
+**该项目已废弃，所有工作已转移到
+[Need For Ping](https://github.com/catscarlet/needforpingthinksmarty)，请前往新项目。**
+
 ## 简介
 项目Need For Ping[https://github.com/catscarlet/needforping](https://github.com/catscarlet/needforping) 的升级版，由之前将数据保存到文件更改为保存到mysql数据库，增加陈旧数据的删除，减少json的请求，修复旧版本的一些问题。
 
