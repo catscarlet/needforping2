@@ -75,11 +75,7 @@ js部分负责从php取数据，并用图表展示 其中：
 php部分负责从mysql读取数据并输出json格式
 
 ## 项目展示
-展示地址：[http://pi.catscarlet.com:8091/needforping2/](http://pi.catscarlet.com:8091/needforping2/)
-
-这个地址是一个插在北京联通宽带上的树莓派，偶尔会关机，打不开很正常。
-
-未来可能会提供长期稳定的demo展示地址。
+无
 
 ## 已知缺陷
 - 因为整个流程设计的原因needforping2版本仅支持同一页面显示一组数据，不能像旧版needforping一样同时显示多组数据。简易修改的话，会导致highcharts的横坐标轴取多次。
